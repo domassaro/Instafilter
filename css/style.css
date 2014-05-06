@@ -1,0 +1,305 @@
+/*Beatrice Huang and Deirdre Massaro */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+html{
+	background: url('../img/logo.jpg') center top repeat #141415;
+
+}
+
+body{
+	position:relative;
+	min-height:500px;
+	color: white;
+}
+
+a, a:visited {
+	outline:none;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+section, footer, header{
+	display: block;
+}
+
+/*----------------------------
+	Heading
+-----------------------------*/
+
+
+#title{
+	width:500px;
+	height:200px;
+	background:url("../img/Instafilter.png") no-repeat;
+	margin:0 auto;
+	margin-top:40px;
+}
+
+#refresh{
+	display:none;
+	text-decoration: none;
+	color:white;
+}
+
+h1{
+	text-align: center;
+}
+
+/*----------------------------
+	Preset Images
+-----------------------------*/
+
+#left_col {
+	display:inline-block;
+	margin-left:-134px;
+}
+#right_col{
+	display: inline-block;
+	margin-left:21px;
+}
+#left_col img {
+max-height:150px;
+max-width:182px;
+float:left;
+padding:2px;
+
+}
+#right_col img {
+max-height:150px;
+max-width:182px;
+float:left;
+padding:2px;
+}
+#wrapper {
+width: 383px;
+height: 414px;
+background: rgb(50,50,50);
+position: relative;
+margin-top: 15px;
+padding: 20px;
+border-radius: 3px;
+}
+
+/*----------------------------
+	The Photo
+-----------------------------*/
+#box{
+	margin: 0 auto;
+	margin-left: 172px;
+}
+
+#photo{
+	margin:0 auto;
+	width:500px;
+	height:500px;
+	text-align:center;
+	position:relative;
+	display: inline-block;
+}
+
+#photo:after{
+	content: 'Drop a Picture or Choose one';
+	top: 150px;
+	text-transform: uppercase;
+	z-index: 1;
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	width: 100%;
+	letter-spacing: 1px;
+}
+
+#photo canvas{
+	text-align:center;
+	display:inline-block;
+	border-radius: 15px;
+	border:8px solid white;
+	position:absolute;
+	z-index:5;
+	top:50%;
+	left: 50%;
+}
+
+#photo img{
+	opacity:0;
+}
+/*----------------------------
+	The FilterSliders
+-----------------------------*/
+
+#FilterSliders{
+ margin:10px 0;
+ display: none;
+ width: 162px;
+}
+#Filters .Filter{
+	float:left;
+	width:300px;
+}
+#Filters .Filter div{
+	padding:5px 10px;
+}
+#Filters .Filter .FilterName{
+	float:left;
+}
+#Filters .Filter .FilterName p{
+	margin:0;
+}
+#Filters .Filter .FilterSetting{
+	float:right;
+}
+#Filters .Filter .FilterSetting input[type="range"]{
+	-webkit-appearance:none!important;
+	width:150px;
+	background-color:#434341;
+	height:1px;
+	vertical-align:1px;
+}
+#Filters .Filter .FilterSetting input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none!important;
+	height:12px;
+	width:15px;
+	background-color:#368ad2;
+	cursor:pointer;
+}
+#Filters .Filter .FilterSetting .FilterValue{width:30px;
+	display:inline-block;
+}
+/*----------------------------
+	The Filters
+-----------------------------*/
+
+#filterContainer{
+	height: 318px;
+	position: relative;
+	width:61%;
+	display: none;
+	margin: 0 auto;
+	margin-top:25px;
+	overflow: hidden;
+	overflow-y:scroll;
+	color: black;
+}
+
+#filterContainer:before{
+	content: '';
+	width: 20px;
+	position: absolute;
+	top: 0;
+	left: -22px;
+	bottom:-10px;
+	z-index:5;
+}
+
+#filterContainer:after{
+	content: '';
+	width: 20px;
+	position: absolute;
+	top: 0;
+	right: -22px;
+	bottom:-10px;
+	z-index:5;
+}
+
+#presetfilters{
+	border-radius: 8px;
+	background-color: white;
+	list-style: none;
+	margin: 0 auto;
+	height: 710px;
+	padding: 10px;
+	color:black;
+}
+
+#presetfilters li{
+	display:inline-block;
+	margin:0 15px 30px 0;
+	float:left;
+	border: 2px solid black;
+	color:black;
+	text-decoration: none;
+}
+
+#presetfilters li a{
+	display: block;
+	width: 150px;
+	height: 130px;
+	position: relative;
+	background: center top no-repeat;
+	text-decoration: none !important;
+	color:black;
+
+	font-weight: bold;
+	line-height: 294px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+#presetfilters li a.active{
+	cursor:default;
+	opacity: 50%;
+	color:black;
+}
+
+#presetfilters li a.active:before{
+	content: '';
+	position: absolute;
+	width: 49px;
+	height: 45px;
+	top: 43px;
+	left: 51px;
+	color:black;
+}
+
+/*----------------------------
+	The Preset Filters
+-----------------------------*/
+
+#presetfilters li #normal{		background-image:url('../img/filters/Normal.jpg'); }
+#presetfilters li #vintage{		background-image:url('../img/filters/Vintage.jpg'); }
+#presetfilters li #lomo{			background-image:url('../img/filters/Lomo.jpg'); }
+#presetfilters li #clarity{		background-image:url('../img/filters/Clarity.jpg'); }
+#presetfilters li #sinCity{		background-image:url('../img/filters/SinCity.jpg'); }
+#presetfilters li #sunrise{		background-image:url('../img/filters/Sunrise.jpg'); }
+#presetfilters li #crossProcess{	background-image:url('../img/filters/CrossProcess.jpg'); }
+#presetfilters li #orangePeel{	background-image:url('../img/filters/OrangePeel.jpg'); }
+#presetfilters li #love{			background-image:url('../img/filters/Love.jpg'); }
+#presetfilters li #grungy{		background-image:url('../img/filters/Grungy.jpg'); }
+#presetfilters li #jarques{		background-image:url('../img/filters/Jarques.jpg'); }
+#presetfilters li #pinhole{		background-image:url('../img/filters/Pinhole.jpg'); }
+#presetfilters li #oldBoot{		background-image:url('../img/filters/OldBoot.jpg'); }
+#presetfilters li #glowingSun{	background-image:url('../img/filters/GlowingSun.jpg'); }
+#presetfilters li #hazyDays{		background-image:url('../img/filters/HazyDays.jpg'); }
+#presetfilters li #herMajesty{	background-image:url('../img/filters/HerMajesty.jpg'); }
+#presetfilters li #nostalgia{		background-image:url('../img/filters/Nostalgia.jpg'); }
+#presetfilters li #hemingway{		background-image:url('../img/filters/Hemingway.jpg'); }
+#presetfilters li #concentrate{	background-image:url('../img/filters/Concentrate.jpg'); }
+
+/*----------------------------
+	Download Button
+-----------------------------*/
+.downloadImage{
+	position: absolute;
+	text-indent: -999px;
+	display: none;
+	top: 100px;
+	right: -260px;
+	overflow: hidden;
+	width: 185px;
+	height: 56px;
+	background: url('../img/download_image.png') no-repeat;
+	margin-top: 129px;
+
+}
+
+footer{
+	height: 50px;
+}
+

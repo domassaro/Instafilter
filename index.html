@@ -1,0 +1,207 @@
+<!-- Beatrice Huang and Deirdre Massaro -->
+<!DOCTYPE html>
+<html
+<head>
+	<meta charset="utf-8" />
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="js/filereader.min.js"></script>
+	<script src="js/caman.full.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<div id='title'> </div>
+  <a id='refresh' href="index.html" ><h1> New Photo? </h1></a>
+	<div id='box'>
+<!--     Preset Images -->
+    <div id='left_col'>
+      <div id='wrapper'>
+        <div id="pimg"> <a href="#"><img src="img/img1.jpg"></a> </div>
+        <div id="pimg"> <a href="#"><img src="img/img2.jpg"></a> </div>
+        <div id="pimg"> <a href="#"><img src="img/img3.jpg"></a> </div>
+        <div id="pimg"><a href="#"><img src="img/img4.jpg"></a></div>
+        <div id="pimg"> <a href="#"><img src="img/img5.jpg"></a></div>
+        <div id="pimg"> <a href="#"><img src="img/img6.jpg"></a></div>
+      </div>
+    </div>
+			<!--   Filter Sliders -->
+	<div id="FilterSliders">
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Brightness</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="-100" max="100" step="1" value="0" type="range" id="brightness">
+        <span class="BrightnessValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Contrast</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="-100" max="100" step="1" value="0" type="range" id="contrast">
+        <span class="ContrastValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Saturation</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="-100" max="100" step="1" value="0" type="range" id="saturation">
+        <span class="SaturationValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Vibrance</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="-100" max="100" step="1" value="0" type="range" id="vibrance">
+        <span class="VibranceValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Exposure</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="-100" max="100" step="1" value="0" type="range" id="exposure">
+        <span class="ExposureValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Hue</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="100" step="1" value="0" type="range" id="hue">
+        <span class="HueValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Sepia</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="100" step="1" value="0" type="range" id="sepia">
+        <span class="SepiaValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Gamma</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="10" step="0.1" value="0" type="range" id="gamma">
+        <span class="GammaValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Noise</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="100" step="1" value="0" type="range" id="noise">
+        <span class="NoiseValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Clip</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="100" step="1" value="0" type="range" id="clip">
+        <span class="ClipValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>Sharpen</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="100" step="1" value="0" type="range" id="sharpen">
+        <span class="SharpenValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>StackBlur</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input min="0" max="20" step="1" value="0" type="range" id="stackBlur">
+        <span class="StackBlurValue">0</span>
+      </div>
+    </div>
+  </div>
+<!--     Photo Canvas -->
+		<div id="photo">
+<!--       Download Button-->			
+<a href="#" class="downloadImage" target="_blank" download="photo.png">Download Image</a>
+		</div>
+<!--     Preset Images -->
+      <div id='right_col'>
+        <div id='wrapper'>
+        <div id="pimg"> <a href="#"><img src="img/img1.jpg"></a></div>
+        <div id="pimg"> <a href="#"><img src="img/img2.jpg"></a></div>
+        <div id="pimg"> <a href="#"><img src="img/img3.jpg"></a></div>
+        <div id="pimg"> <a href="#"><img src="img/img4.jpg"></a></div>
+        <div id="pimg"> <a href="#"><img src="img/img5.jpg"></a></div>
+        <div id="pimg"><a href="#"><img src="img/img6.jpg"></a></div>
+      </div>
+    </div>
+	</div>
+<!-- 	preset filters container -->
+	<div id="filterContainer">
+			<ul id="presetfilters">
+				<li> <a href="#" id="normal">Normal</a> </li>
+				<li> <a href="#" id="vintage">Vintage</a> </li>
+				<li> <a href="#" id="lomo">Lomo</a> </li>
+				<li> <a href="#" id="clarity">Clarity</a> </li>
+				<li> <a href="#" id="sinCity">Sin City</a> </li>
+				<li> <a href="#" id="sunrise">Sunrise</a> </li> 
+				<li> <a href="#" id="crossProcess">Cross Process</a> </li>
+				<li> <a href="#" id="orangePeel">Orange Peel</a> </li>
+				<li> <a href="#" id="love">Love</a> </li>
+				<li> <a href="#" id="grungy">Grungy</a> </li>
+				<li> <a href="#" id="jarques">Jarques</a> </li>
+				<li> <a href="#" id="pinhole">Pinhole</a> </li>
+				<li> <a href="#" id="oldBoot">Old Boot</a> </li>
+				<li> <a href="#" id="glowingSun">Glowing Sun</a> </li>
+				<li> <a href="#" id="hazyDays">Hazy Days</a> </li>
+				<li> <a href="#" id="herMajesty">Her Majesty</a> </li>
+				<li> <a href="#" id="nostalgia">Nostalgia</a> </li>
+				<li> <a href="#" id="hemingway">Hemingway</a> </li>
+				<li> <a href="#" id="concentrate">Concentrate</a> </li>
+			</ul>
+		</div>
+	<footer>
+
+	</footer>
+</body>
+</html>
